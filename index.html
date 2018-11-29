@@ -3,8 +3,8 @@
   <head>
   <meta charset="utf-8">
   <title>"Глэйси"</title>
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <!--<link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">-->
   </head>
   <body>
     <header class="main-header">
@@ -49,35 +49,11 @@
                 </a>
               </div>
             </div>
-            <div class="search-form modal-content-show" 
-              <form action="https://echo.htmlacademy.ru" method="post">
-              <input type="search" name="search" placeholder="Что ищем?">
-              <label class="hiden-top"> <span> Что ищем?</span>
-              </label>
-              </form>
-            </div> 
           <li aria-label="Аутентификация"><button>Вход</button></li>
           <!--Форма аутентификации-->
-            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <p>
-              <label class="visually-hidden" for="user-login">Логин</label>
-              <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Электронная почта">
-            </p>
-            <p>
-              <label class="visually-hidden" for="user-password">Пароль</label>
-              <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
-            </p>
-              </label>
-              <a class="restore" href="#"> Забыли пароль?</a>
-              <a class="restore" href="#"> Новая регистрация</a>
-            
-            <button class="button" type="submit">
-              Войти
-            </button>
-            </form>
           <li aria-label="Корзина"><button>Пусто</button></li>
           <!--Здесь будет форма-->
-         </ul>
+        </ul>
       </div>
       <div class="contacts">
         С 10 до 20, ежедневно
@@ -107,7 +83,6 @@
         </div>
       </div>
 
-  
       <div class="banner banner-raspberry">
         <h2 class="banner-title"><b>Малинка даром!</b></h2>
         <p class="banner-text">При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -186,11 +161,6 @@
       <div class="newsletter-wrapper">
         <div class="newsletter-block">
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="user-subscribe">Логин</label>
-            <input class="subscribe-icon-user" id="user-subscribe" type="text" name="subscribe" placeholder="Электронная почта">
-            <button class="button" type="submit"> Отправить </button>
-        </form>
         </div>
       </div>
     
@@ -205,39 +175,7 @@
         </div>
         <div class="map-canvas"></div>
       </div>
-      <!--Форма обратной связи. Скорее всего нужно объединить с предыдущим блоком картой, пока не знаю-- >
-      <div class="popup-feedback feedback-content-show">
-        <h3>Мы обязательно вам ответим!</h3>
-        <button class="popup-close" type="buttton" title="Закрыть">
-        ::before
-        "Закрыть"
-        ::after
-        </button>
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <p> 
-              <input type="text" name="feedback-name" placeholder="Как вас зовут?"
-                <label class="hidden-top">
-                 <span>Как вас зовут?</span>
-                </label>
-            </p> 
-            <p>
-              <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?" required>
-                <label class="hidden-top">
-                  <span>Ваша почта для ответа?</span>
-                </label>
-            </p>
-            <p>
-              <textarea name="feedback-text" placeholder="Напишите что-нибудь..." required>
-              </textarea>
-                <label class="hidden-top">
-                  <span>Напишите что-нибудь...</span>
-                </label>
-            </p>
-            <button class="submit">Отправить</button>
-          </form>
-        </div>
-        <div class="popup-overlay modal content show">
-        </div>
+      <!--Форма обратной связи.-- >
     </main>
     <footer>
       <div class="social-block">
