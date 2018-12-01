@@ -3,8 +3,8 @@
   <head>
   <meta charset="utf-8">
   <title>"Глэйси"</title>
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <!--<link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">-->
   </head>
   <body>
     <header class="main-header">
@@ -42,11 +42,44 @@
       <div>
         <ul aria-label="user-navigation">
           <li aria-label="Поиск">Поиск</li>
-          <!--Здесь будет форма-->  
+          <!--Форма поиска-->  
+            <div class="search">
+              <div class="serch-wrapper"
+                <a class="button-search" href="search.html">
+                </a>
+              </div>
+            </div>
+            <div class="search-form modal-content-show" 
+              <form action="https://echo.htmlacademy.ru" method="post">
+              <input type="search" name="search" placeholder="Что ищем?">
+              <label class="hiden-top"> <span> Что ищем?</span>
+              </label>
+              </form>
+            </div>
+
           <li aria-label="Аутентификация"><button>Вход</button></li>
-          <!--Здесь будет форма-->
+          <!--Форма аутентификации-->
+          <div>
+            <form class="user" method="post"
+              action="https://echo.htmlacademy.ru">
+              <p>
+                <label for="user-login">Логин</label>
+                <input id="user-login" type="text"name="login" placeholder="Логин">
+              </p>
+              <p>
+                <label for="user-password">Пароль</label>
+                <input id="user-password" type="password"name="password" placeholder="Пароль">
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" name="remember">Запомните меня
+                </label>
+              </p>
+              <button type="submit">Войти</button>
+            </form>
+          </div>
           <li aria-label="Корзина"><button>Пусто</button></li>
-          <!--Здесь будет форма-->
+          <!--Не разобралась с корзиной-->
          </ul>
       </div>
       <div class="contacts">
@@ -152,11 +185,15 @@
           </a>
         </div>
       </div> 
-  
+      <!--Форма подписки на рассылку-->
       <div class="newsletter-wrapper">
         <div class="newsletter-block">
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-        <!--Здесь форма--> 
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
+           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+            <label class="visually-hidden" for="user-subscribe">Логин</label>            
+            <input class="subscribe-icon-user" id="user-subscribe" type="text" name="subscribe" placeholder="Электронная почта"required>
+            <button class="button" type="submit"> Отправить</button>
+          </form>
         </div>
       </div>
     
@@ -168,9 +205,40 @@
           <div class="phone">8 812 450-25-25</div>
           <div>(с 10 до 20 ежедневно)</div>
           <a class="btn btn-feedback" href="#">Форма обратной связи</a>
+          <div class="popup-feedback feedback-content-show">
+            <h3>Мы обязательно вам ответим!</h3>
+          <button class="popup-close" type="buttton" title="Закрыть">
+          ::before
+          "Закрыть"
+          ::after
+          </button>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <p> 
+                <input type="text" name="feedback-name" placeholder="Как вас зовут?"
+                  <label class="hidden-top">
+                   <span>Как вас зовут?</span>
+                  </label>
+              </p> 
+              <p>
+                <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?" required>
+                  <label class="hidden-top">
+                    <span>Ваша почта для ответа?</span>
+                  </label>
+              </p>
+              <p>
+                <textarea name="feedback-text" placeholder="Напишите что-нибудь..." required>
+                </textarea>
+                  <label class="hidden-top">
+                    <span>Напишите что-нибудь...</span>
+                  </label>
+              </p>
+              <button class="submit">Отправить</button>
+            </form>
+          </div>
+          <div class="popup-overlay modal content show"></div>
         </div>
+      </div>  
         <div class="map-canvas"></div>
-      </div>
     </main>
     <footer>
       <div class="social-block">
