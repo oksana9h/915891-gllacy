@@ -51,20 +51,181 @@
       <div>
         <ul aria-label="user-navigation">
           <li aria-label="Поиск">Поиск</li>
-          <!--Здесь будет форма-->  
+          <!--Форма поиска-->
+            <div class="search">
+              <div class="serch-wrapper"
+                <a class="button-search" href="search.html">
+                </a>
+              </div>
+            </div>
+            <div class="search-form modal-content-show" 
+              <form action="https://echo.htmlacademy.ru" method="post">
+              <input type="search" name="search" placeholder="Что ищем?">
+              <label class="hiden-top"> <span> Что ищем?</span>
+              </label>
+              </form>
+            </div>  
           <li aria-label="Аутентификация"><button>Вход</button></li>
-          <!--Здесь будет форма-->  
+          <!--Форма аутентификации-->
+            <div>
+            <form class="user" method="post"
+              action="https://echo.htmlacademy.ru">
+              <p>
+                <label for="user-login">Логин</label>
+                <input id="user-login" type="text"name="login" placeholder="Логин">
+              </p>
+              <p>
+                <label for="user-password">Пароль</label>
+                <input id="user-password" type="password"name="password" placeholder="Пароль">
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" name="remember">Запомните меня
+                </label>
+              </p>
+              <button type="submit">Войти</button>
+            </form>
+          </div>  
            <li aria-label="Корзина"><button>2 товара</button></li>
+           <!--Корзина с товарами-->
+    <div class="cart-with-item">
+      ::before
+      <div class="cart-item-wrapper">
+        <a class="cart-button" href="cart.html">2 товара</a>
+      </div>
+        <table class="cart-item">
+          <tbody>
+            <tr class="class-item-size">
+              <td>
+                <button class="cart-close button" type="submit" value="Оформить заказ">Удалить товар</button> 
+              </td>
+              <td>
+                <a href="#">
+                  <img src="img/catalog-item.html/1.png" class="cart-img" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                </a>
+              </td>
+              <td>
+                <a href="#">Пломбир с апельсиновым джемом</a>
+              </td>
+              <td class="item-no-wrap">1,5 кг х <span>200 руб.</span>
+              </td>
+              <td class="item-no-wrap">300 руб.
+              </td>
+            </tr>
+            <tr class="class-item-size">
+              <td>
+                <button class="cart-close" type="submit" value="Оформить заказ">Удалить товар</button>
+              </td>
+              <td>
+                <a href=#>
+                  <img src="img/catalog-item.html/3.png" class="cart-img" width="33" height="33" alt="Клубничный пломбир с присыпкой из  белого шоколада">
+                </a>
+              </td>
+              <td>
+                <a href="#">Клубничный пломбир с присыпкой из белого шоколада
+                </a>
+              </td>
+              <td>
+                1,5 кг х <span>300 руб.</span>
+              </td>
+              <td>450руб.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="cart-total-cost">Итого:750 руб.</div>
+        <button class="button cart-button" type="submit" value="Оформить заказ"></button> 
+        </div>
+        <!--Корзина закончилась-->
         </ul>
       </div>
       <div class="contacts">
         С 10 до 20, ежедневно
         <b>8 812 450-25-25</b>
       </div>
-      <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <!-- Здесь будет форма -->
-      </section>
+      <!-- Форма фильтр -->
+      <div class= "row-inline">
+        <aside class="filters">
+          <form class ="filters-form"
+            action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class ="filters-category">
+                <legend>Сортировка:</legend>
+                <select id="sort">
+                  <option value="popular"></option>
+                  <option value="cheap"></option>
+                  <option value="expensive"></option>
+                  <option value="fatness"></option>
+                </select>
+              </fieldset>
+              <fieldset class="filters-category">
+                <legend>Цена:100-500 руб.</legend>
+                <div class= "feature-wrapper">
+                  <input type="first-range" min="100" max="500" value="100">
+                  <input type="second-range" min="100" max= "500" value="500">
+                </div>
+              </fieldset>
+              <fieldset class="filters-category nowrap">
+                <legend>Жирность:</legend>
+                <div class="feature-wrapper">
+                  <input name="fatness" type="radio" value="0" id="zero">
+                  <label for="zero">
+                    ::before
+                    "0%"
+                  </label>
+                  <input name="fatness" type="radio" value="10" id="tеn">
+                  <label for="ten">
+                    ::before
+                    "до 10%"
+                  </label>
+                  <input name="fatness" type="radio" value="30" id="thirty">
+                  <label for="thity">
+                    ::before
+                    "до 30%"
+                  </label>
+                  <input name="fatness" type="radio" value=" more 30" id="more-thirty">
+                  <label for="more-thity">
+                    ::before
+                    "выше 30%"
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="filters-category">
+                <legend>Наполнители:</legend>
+                <div class="feature-wrapper">
+                  <input type="checkbox" value="шоколадные" id="chocolate"checked>
+                  <label for ="chocolate">
+                    ::before
+                    "шоколадные"
+                  </label>
+                  <input type="checkbox" value="сахарные присыпки" id="suger"checked>
+                  <label for ="suger">
+                    ::before
+                    "сахарные присыпки"
+                  </label>
+                  <input type="checkbox" value="фрукты" id="fruit">
+                  <label for ="fruit">
+                    ::before
+                    "фрукты"
+                  </label>
+                  <input type="checkbox" value="сиропы" id="syrup">
+                  <label for ="syrup">
+                    ::before
+                    "сиропы"
+                  </label>
+                  <input type="checkbox" value="джемы" id="jam">
+                  <label for ="jam">
+                    ::before
+                    "джемы"
+                  </label>
+                </div>
+              </fieldset>
+            <button class="filters-button" type="submit" value="Применить">Применить          
+            </button>
+          </form>
+        </aside>
+      </div>
+      <!--Фильтр закончился-->
     </header>
 
     <main class="container">
