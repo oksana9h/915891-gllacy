@@ -1,0 +1,468 @@
+body {
+  /*Глобальные*/
+  margin: 0;
+  font-family: "Roboto", Open Sans, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #849d8f;
+  background-position: 0 0;
+}
+/*Навигация*/
+.main-navigation{
+  list-style: none;
+}
+.main-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #849d8f;
+}
+
+ul {
+list-style: none;
+}
+
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.site-navigation a ,
+.user-navigation a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a.site-navigation : hover,
+a.site-navigation : focus, 
+a.site-navigation : active
+{
+  background-color: #849d8f;
+  color: #000000;
+}
+.sub-menu {
+  list-style: none;
+}
+.sub-menu a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400px;
+  color: #323232;
+  background-color: #;
+}
+/*Здесь почему-то применились не все свойства, размер шрифта не применился*/
+
+.sub-menu a: hover{
+  background-color: #fbded7;
+}
+.sub-menu a: focus{
+  background-color: #f6b5a5; 
+}
+.sub-menu a: active{
+  background-color: d07058;
+}
+/*эти свойства к ссылкам тоже не применились*/
+
+
+p.work-time{
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  text-align: right;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+p.telefone-number {
+  font-size: 22px;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: right;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* Не применились свойства ко второму стилю с тел.ном./*
+
+
+/*Формы индекса*/
+.user-form,
+.search-form
+.subscribe-form{
+  list-style: none; ;
+}
+
+.user-form input[type="email"],
+.user-form input[type="password"]
+{
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 24px;
+  color: #999999;
+  border: 1px solid #999999;
+  background: #ffffff;
+}
+
+.search-form input[type="text"]
+{
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 24px;
+  color: #999999;
+  border: 1px solid #999999;
+  background:#ffffff
+   }
+   .form-link{
+    list-style: none;
+   }
+
+  a.form-link{
+  color:#323232; 
+  font-size: 13px;
+  font-weight: 400px;
+  line-height: 24px;
+  text-transform: none;
+  }
+.subscribe-form input[type="text"]
+{
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 24px;
+  color: #999999;
+  border: 1px solid #999999;
+  background: #ffffff;
+}
+
+/*Корзина*/
+
+.cart-item-link,
+.сart-item-wrapper{
+  list-style: none;
+}
+
+.cart-item-wrapper a{
+  font-weight: 400px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #323232;
+  text-decoration:none;
+}
+a.cart-item-link {
+  font-weight: 400px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #323232;
+  text-decoration:none; 
+}
+
+td{
+  font-weight: 400px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #323232;
+  text-decoration: none; 
+}
+
+/* Фильтры */
+.filters{
+  font-weight: 400px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+.filters fieldset{
+  border: none;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  border-bottom: 1px solid #a9bbb1;
+  text-decoration: none;
+}
+
+/*.filters-input*/
+
+
+/.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  margin: -1; 
+}
+
+
+/*Хлебные крошки*/
+.breadcrumbs {
+  list-style: none;
+}
+.breadcrumbs a {
+font-size: 14px;
+line-height: 16px;
+font-weight: 400px;
+color: #ffffff;
+text-decoration: none;
+}
+/*Толшина шрифта не сработала*/
+.breadcrumbs a:hover,
+.breadcrumbs a:focus
+ {
+  text-decoration: underline;
+  color: #f4aca2;
+}
+.breadcrumbs-current {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.slide-title{
+  font-size: 60px;
+  line-height: 60,35px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+ }
+ a.btn-slide {
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+ }
+
+
+/*Пагинация*/
+
+/* Не сработало, не применился шрифт и цвет к 1*/
+.pagination {
+  list-style: none;
+}
+.pagination-item {
+  background-color: #849d8f;
+  color: #ffffff;
+  text-decoration: none;
+}
+.pagination-item: hover,
+.pagination-item: focus,
+.pagination-item: active {
+background: #ffffff;
+color: #323232;
+}
+a.pagination-item.pagination-item-current {
+background-color:#ffffff;
+color: #323232;
+}
+
+.products a{
+  list-style: none;
+}
+.products a {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: underline;
+  text-align: left;
+}
+.item-price{
+  list-style: none;
+}
+p.item-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700px;
+  color: #ffffff;
+  background-color: transparent;
+  text-align: left;
+}
+.hits-price{
+  list-style: none;
+}
+.hits-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700px;
+  color: #ffffff;
+  background-color: transparent;
+  text-align: left; 
+}
+.btn,
+.btn-banner,
+.btn-slide{
+  list-style: none;
+}
+a.btn-banner,
+a.btn-slide{
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700px;
+  color: #ffffff;
+  background-color: transparent;
+  text-align: center; 
+  text-decoration: none;
+}
+a.hits-title{
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700px;
+  color: #ffffff;
+  background-color: transparent;
+  text-align: center; 
+  text-decoration: none;  
+}
+.shop-description{
+  list-style: none;
+}
+.shop-description h1{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: medium;
+  color: #323232;
+  background-color: transparent;
+  text-align: left; 
+  text-decoration: none;  
+}
+.shop-description ul{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400px;
+  color: #323232;
+  background-color: transparent;
+  text-align: left; 
+  text-decoration: none;  
+}
+.blog-desctiption{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: medium;
+  color: #323232;
+  background-color: transparent;
+  text-align: left; 
+  text-decoration: none;  
+}
+a.blog-last-news{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #323232;
+  background-color: transparent;
+  text-align: left; 
+  text-decoration: underline;  
+}
+a.blog-last-news{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #323232;
+  background-color: transparent;
+  text-align: left; 
+  text-decoration: underline;  
+}
+p.subscribe-form{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400px;
+  color: #5a5a5a;
+  background-color: transparent;
+  text-align: left; 
+  text-decoration: none; 
+}
+.map-description{
+  list-style: none;
+}
+p.office-title{
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400px;
+  color: #323232;
+  background-color: transparent;
+  text-align: left; 
+  text-decoration: none; 
+}
+p.office-address{
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #323232;
+  background-color: transparent;
+  text-align: left; 
+  text-decoration: none; 
+}
+
+/*Футер*/
+.social-block{
+list-style: none;
+}
+.social-block a{
+  color: #ffffff;
+  background-color: ##849d8f;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400px;
+  text-decoration: none;
+  text-align: center;
+}
+.bottom-navigation{
+  list-style: none;
+}
+a.bottom-navigation{
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400px;
+  background-color: ##849d8f;
+  text-align: left;
+  text-decoration: none;
+}
+a.bottom-navigation : hover,
+a.bottom-navigation : focus,
+a.bottom-navigation : active{
+  background-color: #f17e64;
+}
+
+a.author-link {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400px;
+  background-color: ##849d8f;
+  text-decoration: none;
+}
+p.for-orders{
+  color: #323232;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400px;
+  text-decoration: none;
+}
+p.phone-number{
+  color: #323232;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  text-decoration: none;  
+}
+
+p.time-work{
+  color: #323232;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400px;
+  text-decoration: none;
+}
+a.btn-feedback{
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+/*Кнопки*/
+.btn{
+  list-style: none;
+}

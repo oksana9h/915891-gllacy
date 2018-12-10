@@ -3,8 +3,9 @@
   <head>
   <meta charset="utf-8">
   <title>"Глэйси"</title>
-  <!--<link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -32,49 +33,49 @@
                   <a href="#">Мелорин</a>
                 </li>
               </ul>
-          </li>
-        </ul>
-        <ul> 
-        <li><a href="#">Доставка и оплата</a></li>
-        <li><a href="#">О Компании</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О Компании</a></li>
         </ul>
       </nav>      
       <div>
         <ul aria-label="user-navigation">
           <li aria-label="Поиск">Поиск
           <!--Форма поиска-->  
-            <div class="search">
+            <div class="search-form">
               <div class="search-wrapper">
                 <button class="button-search"></button>
               </div>
             </div>
-            <div class="search-form modal-content-show"> 
-              <form action="https://echo.htmlacademy.ru" method="post">
-                <label class="visually-hidden">Поле поиска
-                  <input type="text" name="search" placeholder="Что ищем?">
-                </label>
+            <div class="search-form modal"> 
+              <form  class="search-form"
+                action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden">Поле поиска
+                    <input type="text" name="search" placeholder="Что ищем?">
+                  </label>
+                </p>
               </form>
             </div>
           </li>
           <!--Форма аутентификации-->
           <li aria-label="Аутентификация"><button>Вход</button>
             <div>
-              <form class="user" method="post"
+              <form class="user-form" method="post"
                 action="https://echo.htmlacademy.ru">
                 <p>
-                  <label for="user-email" class="visually-hidden">Электронная почта
-                      <input id="user-email" type="email" name="email" placeholder="Электронная почта">
+                  <label class="visually-hidden">Электронная почта
+                      <input type="email" name="email" placeholder="Электронная почта">
                   </label>
                 </p>
                 <p>
-                  <label for="user-password" class="visually-hidden">Пароль
-                      <input id="user-password" type="password" name="password" placeholder="Пароль">
+                  <label class="visually-hidden">Пароль
+                      <input type="password" name="password" placeholder="Пароль">
                   </label>
                 </p>
                 <button type="submit">Войти</button>
                 <p>
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
+                  <a class="form-link" href="#">Забыли пароль?</a>
+                  <a class="form-link" href="#">Новая регистрация</a>
                 </p>
               </form>
             </div>
@@ -84,8 +85,8 @@
         </ul>
       </div>
       <div class="contacts">
-        С 10 до 20, ежедневно
-        <b>8 812 450-25-25</b>
+        <p class="work-time">С 10 до 20, ежедневно</p>
+        <p class="telefone-number">8 812 450-25-25</p>
       </div>
     </header>
     <main class="container">
@@ -114,13 +115,13 @@
       <div class="banner banner-raspberry">
         <h2 class="banner-title">Малинка даром!</h2>
         <p class="banner-text">При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <a href="#" class="btn btn-banner">Хочу варенье!</a>
+        <a class="btn btn-banner" href="#">Хочу варенье!</a>
       </div>
 
       <div class="banner banner-chocolate">
          <h2 class="banner-title">Шоколадки даром!</h2> 
          <p class="banner-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-         <a href="#" class="btn btn-banner">Хочу шоколадки!</a>
+         <a class="btn btn-banner" href="#">Хочу шоколадки!</a>
       </div>
      
 
@@ -192,9 +193,10 @@
       <div class="newsletter-wrapper">
         <div class="newsletter-block">
           <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
-           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-            <label class="visually-hidden" for="user-subscribe">Логин</label>            
-            <input class="subscribe-icon-user" id="user-subscribe" type="text" name="subscribe" placeholder="Электронная почта" required>
+           <p class="subscribe-form">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+            <label class="visually-hidden">Логин           
+              <input class="subscribe-icon-user" type="text" name="subscribe" placeholder="Электронная почта" required>
+            </label>
             <button class="button" type="submit">Отправить</button>
           </form>
         </div>
@@ -202,11 +204,21 @@
     
       <div class="map">
         <div class="map-description">
-          <div>Адрес главного офиса и офлайн магазина:</div>
-          <div class="office-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</div>
-          <div>Для заказов по телефону:</div>
-          <div class="phone">8 812 450-25-25</div>
-          <div>(с 10 до 20 ежедневно)</div>
+          <div>
+            <p class="office-title">Адрес главного офиса и офлайн магазина:</p>
+          </div>
+          <div>
+           <p class="office-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+          </div>
+          <div>
+            <p class="for-orders">Для заказов по телефону:</p>
+          </div>
+          <div class="phone">
+            <p class="phone-number">8 812 450-25-25</p>
+          </div>
+          <div>
+            <p class="time-work">(с 10 до 20 ежедневно)</p>
+          </div>
           <a class="btn btn-feedback" href="#">Форма обратной связи</a>
           <div class="popup-feedback feedback-content-show">
             <h3>Мы обязательно вам ответим!</h3>
@@ -234,7 +246,7 @@
               <button class="submit">Отправить</button>
             </form>
           </div>
-          <div class="popup-overlay modal content show"></div>
+          <div class="popup-overlay modal"></div>
         </div>
       </div>  
       <div class="map-canvas"></div>
@@ -248,10 +260,18 @@
       </div>
 
       <ul class="bottom-navigation">
-        <li class="heart">Для поставщиков</li>
-        <li>Наши документы</li>
-        <li>О производстве</li>
-        <li>Экологические стандарты</li>
+        <li class="heart">
+          <a class="bottom-navigation" href="#"> Для поставщиков</a>
+        </li>
+        <li>
+          <a class="bottom-navigation" href="#">Наши документы</a>
+        </li>
+        <li>
+          <a class="bottom-navigation" href="#">О производстве</a>
+        </li>
+        <li>
+          <a class="bottom-navigation" href="#">Экологические стандарты</a>
+        </li>
       </ul>
 
       <address class="footer-author">

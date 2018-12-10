@@ -3,6 +3,9 @@
   <head>
   <meta charset="utf-8">
   <title>Каталог товаров магазин "Глейси"</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -31,13 +34,11 @@
                 <a href="#">Мелорин</a>
               </li>
             </ul>
-          </li>
-        </ul>
-        <ul>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О Компании</a></li>
         </ul>
       </nav>
+      <!--Хлебные крошки-->
       <ul class="breadcrumbs">
         <li>
           <a href="index.html">Главная</a>
@@ -52,35 +53,38 @@
       <ul aria-label="user-navigation">
         <!--Форма поиска-->
         <li aria-label="Поиск">Поиск
-          <div class="search">
+          <div class="search-form">
             <div class="search-wrapper">
               <button class="button-search"></button>
             </div>
           </div>
-            <div class="search-form modal-content-show">
+            <div class="search-form modal"> 
               <form action="https://echo.htmlacademy.ru" method="post">
-                <input type="text" name="search" placeholder="Что ищем?">
-                <label class="visually-hidden">Поле поиска</label>
+                <label class="visually-hidden">Поле поиска
+                  <input type="text" name="search" placeholder="Что ищем?">
+                </label>
               </form>
             </div>  
           </li>
           <!--Форма аутентификации-->            
           <li aria-label="Аутентификация"><button>Вход</button>
             <div>
-              <form class="user" method="post"
+              <form class="user-form" method="post"
                 action="https://echo.htmlacademy.ru">
                 <p>
-                  <label for="user-email" class="visually-hidden">Электронная почта</label>
-                  <input id="user-email" type="email" name="email" placeholder="Электронная почта">
+                  <label class="visually-hidden">Электронная почта
+                    <input type="email" name="email" placeholder="Электронная почта">
+                  </label>
                 </p>
                 <p>
-                  <label for="user-password" class="visually-hidden">Пароль</label>
-                  <input id="user-password" type="password" name="password" placeholder="Пароль">
+                  <label class="visually-hidden">Пароль
+                    <input type="password" name="password" placeholder="Пароль">
+                  </label>
                 </p>
                 <button type="submit">Войти</button>
                 <p>
-                  <a href="#">Забыли пароль?</a>
-                  <a href="#">Новая регистрация</a>
+                  <a class="form-link" href="#">Забыли пароль?</a>
+                  <a class="form-link" href="#">Новая регистрация</a>
                 </p>
               </form>
             </div>
@@ -100,12 +104,12 @@
                       </button> 
                     </td>
                     <td>
-                      <a href="#">
+                      <a class="cart-item-link" href="#">
                         <img src="img/catalog-item.html/1.png" class="cart-img" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                       </a>
                     </td>
                     <td>
-                      <a href="#">Пломбир с апельсиновым джемом
+                      <a class="cart-item-link" href="#">Пломбир с апельсиновым джемом
                       </a>
                     </td>
                     <td class="item-no-wrap">
@@ -122,12 +126,12 @@
                         </button> 
                     </td>
                     <td>
-                      <a href=#>
+                      <a class="cart-item-link" href=#>
                         <img src="img/catalog-item.html/3.png" class="cart-img" width="33" height="33" alt="Клубничный пломбир с присыпкой из  белого шоколада">
                       </a>
                     </td>
                     <td>
-                      <a href="#">Клубничный пломбир с присыпкой из белого шоколада
+                      <a class="cart-item-link" href="#">Клубничный пломбир с присыпкой из белого шоколада
                       </a>
                     </td>
                     <td>
@@ -229,6 +233,7 @@
             </button>
           </form>
         </aside>
+        <!--Фильтр закончился-->
       <h1 class="visually-hidden">Каталог товаров магазина "Глэйси"</h1>
       <ul class="products">     
         <li class="item">
@@ -244,7 +249,6 @@
           </div>
         </li>
 
-        <!-- !!! -->
         <li class="item">
           <div class="item-hover">
            <a class="btn btn-item-hover" href="#">Быстрый просмотр</a>
@@ -378,22 +382,23 @@
           </div>
         </li>
       </ul>
-      <nav class="catalog-pages">
-        <ul>
+      <!--Пагинация-->
+      <nav class="catalog-list">
+        <ul class="pagination">
           <li>
-            <a class="paginator-btn-active" href="#">1</a>
+            <a class="pagination-item-current" href="#">1</a>
            </li>
           <li>
-            <a href="#">2</a>
+            <a class="pagination-item" href="#">2</a>
           </li>
           <li>
-            <a href="#">3</a>
+            <a class="pagination-item" href="#">3</a>
           </li>
           <li>
-            <a href="#">4</a>
+            <a class="pagination-item" href="#">4</a>
           </li>
           <li>
-            <a href="#">5</a>
+            <a class="pagination-item" href="#">5</a>
           </li>
         </ul>
       </nav>
@@ -406,10 +411,18 @@
         <a href="#" class="social-link social-vk">VK</a>
       </div>
       <ul class="bottom-navigation">
-        <li class="heart">Для поставщиков</li>
-        <li>Наши документы</li>
-        <li>О производстве</li>
-        <li>Экологические стандарты</li>
+        <li class="heart">
+          <a class="bottom-navigation" href="#"> Для поставщиков</a>
+        </li>
+        <li>
+          <a class="bottom-navigation" href="#">Наши документы</a>
+        </li>
+        <li>
+          <a class="bottom-navigation" href="#">О производстве</a>
+        </li>
+        <li>
+          <a class="bottom-navigation" href="#">Экологические стандарты</a>
+        </li>
       </ul>
       <address class="footer-author">
         <img src="img/index.html/logo-htmlacademy.png" alt="Логотип html академии">
