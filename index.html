@@ -9,122 +9,155 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-navigation">
-        <a class="main-header-logo">
-        <img src="img/index.html/logo.png" width="154" height="64" alt="Логотип магазина Глейси">
-        </a>
-        <ul class="site-navigation">
-          <li class="with-sub-menu active btn">
-              <a href="catalog.html">Каталог</a>
+      <!--Навигация--> 
+      <div class="container">
+        <nav class="main-navigation">
+          <a class="main-header-logo">
+            <img src="img/index.html/logo.png" width="154" height="64" alt="Логотип магазина Глейси">
+          </a>
+          <ul class="site-navigation">
+            <li class="navigation-item current-item", class="navigate">
+              <a href="index.html">Каталог</a>    
               <ul class="sub-menu">
-                <li>
+                <li class="navigate sub-item-current">
                   <a href="#">Новинки</a>
                 </li>
-                <li>
+                <li class="navigate">
                   <a href="#">Сливочное</a>
                 </li>
-                <li>
+                <li class="navigate">
                   <a href="#">Щербеты</a>
                 </li>
-                <li>
+                <li class="navigate">
                   <a href="#">Фруктовый лед</a>
                 </li>
-                <li>
+                <li class="navigate">
                   <a href="#">Мелорин</a>
                 </li>
               </ul>
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">О Компании</a></li>
-        </ul>
-      </nav>      
+            </li>
+            <li class="navigation-item">
+              <a href="#">Доставка и оплата</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#">О компании</a>
+            </li>
+          </ul>
+        </nav> 
+      </div>     
       <div>
         <ul aria-label="user-navigation">
-          <li aria-label="Поиск">Поиск
-          <!--Форма поиска-->  
-            <div class="search-form">
-              <div class="search-wrapper">
-                <button class="button-search"></button>
+          <div class="user-block">
+            <li class ="search-button"aria-label="Поиск"><button>Поиск</button>
+            <!--Форма поиска-->  
+              <!--<div class="search-form modal">
+                <div class="search-wrapper">
+                  <button class="button-search"></button>
+                </div>
               </div>
-            </div>
-            <div class="search-form modal"> 
-              <form  class="search-form"
+              <div class="search-form modal"> 
+                <form  class="search-form"
                 action="https://echo.htmlacademy.ru" method="post">
-                <p>
-                  <label class="visually-hidden">Поле поиска
+                  <p>                
+                    <label class="visually-hidden">Поле поиска</label>
                     <input type="text" name="search" placeholder="Что ищем?">
-                  </label>
-                </p>
-              </form>
-            </div>
-          </li>
-          <!--Форма аутентификации-->
-          <li aria-label="Аутентификация"><button>Вход</button>
-            <div>
-              <form class="user-form" method="post"
-                action="https://echo.htmlacademy.ru">
-                <p>
-                  <label class="visually-hidden">Электронная почта
-                      <input type="email" name="email" placeholder="Электронная почта">
-                  </label>
-                </p>
-                <p>
-                  <label class="visually-hidden">Пароль
-                      <input type="password" name="password" placeholder="Пароль">
-                  </label>
-                </p>
-                <button type="submit">Войти</button>
-                <p>
-                  <a class="form-link" href="#">Забыли пароль?</a>
-                  <a class="form-link" href="#">Новая регистрация</a>
-                </p>
-              </form>
-            </div>
-          </li>
-          <li aria-label="Корзина"><button>Пусто</button>
-          </li>
+                  </p>
+                </form>
+              </div>
+            </li>-->
+            <!--Форма аутентификации-->
+            <li class="login-button" aria-label="Аутентификация"><button>Вход</button>
+              <div>
+                <!--
+                <form class="user-form modal" method="post"
+                  action="https://echo.htmlacademy.ru">
+                  <p>
+                    <label class="visually-hidden">Электронная почта</label>
+                    <input type="email" name="email" placeholder="Электронная почта">
+                  </p>
+                  <p>
+                    <label class="visually-hidden">Пароль</label>
+                    <input type="password" name="password" placeholder="Пароль">
+                  </p>
+                  <button class="btn login-btn" type="submit">Войти</button>
+                  <p>
+                    <a class="form-link" href="#">Забыли пароль?</a>
+                  </p>
+                  <p>
+                    <a class="form-link" href="#">Новая регистрация</a>
+                  </p>
+                </form>-->
+              </div>
+            </li>
+            <li class="cart"aria-label="Корзина"><button>Пусто</button>
+            </li>
+          </div>
         </ul>
-      </div>
-      <div class="contacts">
-        <p class="work-time">С 10 до 20, ежедневно</p>
-        <p class="telefone-number">8 812 450-25-25</p>
       </div>
     </header>
     <main class="container">
+      <div class="contacts">
+        <div class="work-time">
+          <p class="work-time">С 10 до 20, ежедневно</p>
+        </div>
+        <div class="telefone-number">
+          <p class="telefone-number">8 812 450-25-25</p>
+        </div>
+      </div>
+      <div class="wrapper">
+      <input type="radio" name="point" id="slide1" checked>
+      <input type="radio" name="point" id="slide2">
+      <input type="radio" name="point" id="slide3">
+      
       <div class="slider">
-        <input type="radio" id="radio1" hidden>
-        <input type="radio" id="radio2" hidden>
-        <input type="radio" id="radio3" hidden>
-        <!--Слайдер начинается-->
-        <div class="slide slider-1">
-          <div class="slide-title">Крембрюле и пломбир с малиновым джемом
+        <div class="slides slide1"></div>
+        <div class="slides slide2"></div>
+        <div class="slides slide3"></div>
+        
+      </div>  
+      <div class="controls">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+        
+      </div>
+    </div>
+        <!--Слайдер 
+        
+          <div class="slide-title-1">
+            <p class="slide-title-1"Крембрюле и пломбир с малиновым джемом> </p>
           </div>
           <a class="btn btn-slide" href="#">Давайте оба!</a>
         </div>
         <div class="slide slider-2">
-          <div class="slide-title">Шоколадный пломбир и лимонный сорбет
+          <div class="slide-title-2">
+            <p class="slide-title-2" Шоколадный пломбир и лимонный сорбет></p>
           </div>
           <a class="btn btn-slide" href="#">Давайте оба!</a>
         </div>
         <div class="slide slider-3">
-          <div class="slide-title">Пломбир с помадкой и клубничный щербет
+          <div class="slide-title-3">
+            <p class="slide-title-3"Пломбир с помадкой и клубничный щербет></p>
           </div>
           <a class="btn btn-slide" href="#">Давайте оба!</a>
         </div>
-      </div>
+      </div>-->
 
-      <div class="banner banner-raspberry">
-        <h2 class="banner-title">Малинка даром!</h2>
-        <p class="banner-text">При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <a class="btn btn-banner" href="#">Хочу варенье!</a>
-      </div>
-
-      <div class="banner banner-chocolate">
-         <h2 class="banner-title">Шоколадки даром!</h2> 
-         <p class="banner-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-         <a class="btn btn-banner" href="#">Хочу шоколадки!</a>
+      <div class="banner-columns">
+        <div class="banner-raspberry">
+          <h2 class="banner-title">Малинка даром!</h2>
+          <p class="banner-text">При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+          <a class="btn btn-banner" href="#">Хочу варенье!</a>
+        </div>
+      
+        <div class="banner banner-chocolate">
+           <h2 class="banner-title">Шоколадки даром!</h2> 
+           <p class="banner-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+           <a class="btn btn-banner" href="#">Хочу шоколадки!</a>
+        </div>
       </div>
      
-
+      <!--Мороженое -->
       <div class="hits">
         <div class="hits-preview">
           <div>            
@@ -220,10 +253,10 @@
             <p class="time-work">(с 10 до 20 ежедневно)</p>
           </div>
           <a class="btn btn-feedback" href="#">Форма обратной связи</a>
-          <div class="popup-feedback feedback-content-show">
+          <div class="popup-feedback modal">
             <h3>Мы обязательно вам ответим!</h3>
             <button class="popup-close" type="button" title="Закрыть">Закрыть</button>
-            <form action="https://echo.htmlacademy.ru" method="post">
+            <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
               <p> 
                 <label class="visually-hidden">
                   <input type="text" name="feedback-name" placeholder="Как вас зовут?">

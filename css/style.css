@@ -1,6 +1,9 @@
-body {
-  /*Глобальные*/
+/*Глобальные*/
+  body
+  {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Roboto", Open Sans, sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -9,62 +12,111 @@ body {
   text-decoration: none;
   background-color: #849d8f;
   background-position: 0 0;
+{
+  list-style:none;
+  background:#87a092;
 }
-/*Навигация*/
-.main-navigation{
-  list-style: none;
-}
-.main-navigation {
-  font-size: 16px;
-  line-height: 18px;
-  color: #ffffff;
-  background-color: #849d8f;
 }
 
 ul {
-list-style: none;
-}
-
-.site-navigation,
-.user-navigation {
   list-style: none;
 }
 
-.site-navigation a ,
-.user-navigation a {
-  color: #ffffff;
-  text-decoration: none;
+/*Навигация*/
+.navigation-item {
+  display: inline-block;
+  position: relative;
+  z-index: 12;
 }
-a.site-navigation : hover,
-a.site-navigation : focus, 
-a.site-navigation : active
-{
-  background-color: #849d8f;
-  color: #000000;
-}
-.sub-menu {
-  list-style: none;
-}
-.sub-menu a {
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 400px;
+
+.navigation-item > a {  
+  display: inline-block;
+  color:#ffffff;
+  text-decoration:none;
+  background: transparent;
+  border-radius: 15px;  
+  padding: 7px 15px;
+  margin-bottom:5px;
+  z-index: 12;
+  }
+
+.navigation-item > a:hover {
+    background: #f7f6f3;
+    color: #323232;
+    text-decoration:none;
+      }
+.navigation-item > a:focus {
+  background: #d07058;
   color: #323232;
-  background-color: #;
-}
-/*Здесь почему-то применились не все свойства, размер шрифта не применился*/
+  text-decoration:none;
+  font-weight:700;
+  }
 
-.sub-menu a: hover{
-  background-color: #fbded7;
+.navigation-item.current-item > a {  
+  border-radius: 15px;
+  background: #ffffff;
+  color: #323232;
+  font-weight: 700;
 }
-.sub-menu a: focus{
-  background-color: #f6b5a5; 
-}
-.sub-menu a: active{
-  background-color: d07058;
-}
-/*эти свойства к ссылкам тоже не применились*/
 
+.sub-menu {  
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 130px;
+  background: #f8f7f4;
+  border-radius: 3px;
+  padding: 8px 5px 8px 22px;
+  white-space: normal;
+  box-shadow:0 20px 20px(rgba 0,0,0,0.4);
+  padding: 0;
+  margin: 0;
+}
+
+.navigate {
+  padding: 5px 10px;
+  white-space: nowrap;
+  z-index: 12;
+}
+
+.sub-menu a {
+  text-decoration:none;
+  color: #323232;
+  font-size:14px;
+  line-height:24px;
+  z-index: 12;
+}
+
+.sub-item-current {
+  font-weight: 700;
+  border-bottom: 1px solid #999999;
+  z-index: 12;
+}
+
+li.navigate:hover {
+ background: #fbded7;
+ border-radius: 3px;
+  
+}
+li.navigate:focus {
+ background: #f6b5a5;
+ border-radius: 3px;
+}
+
+li.navigate:active {
+ background: #li.navigate:focus {
+ background: #f6b5a5;
+ border-radius: 3px;
+};
+ border-radius: 3px;
+}
+.sub-menu a:focus{
+ background: #f6b5a5; 
+}
+.navigation-item:hover > .sub-menu {
+  display: block;
+}
 
 p.work-time{
   font-size: 14px;
@@ -83,14 +135,12 @@ p.telefone-number {
   font-weight: bold;
   text-decoration: none;
 }
-/* Не применились свойства ко второму стилю с тел.ном./*
-
 
 /*Формы индекса*/
-.user-form,
+/*.user-form,
 .search-form
 .subscribe-form{
-  list-style: none; ;
+  list-style: none; 
 }
 
 .user-form input[type="email"],
@@ -113,18 +163,101 @@ p.telefone-number {
   border: 1px solid #999999;
   background:#ffffff
    }
-   .form-link{
+.modal {
+  position: fixed;}
+.modal {
+  color: #;
+  background-color: #f8f7f4;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);}
+
+.search-form{
+  top: 60px;
+  left: 50%;
+  width: 342px;
+  padding: 10px 5px 5px ;
+  padding-left:3px;
+  margin-left:10px;
+  border-radius:5px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.search-form p {
+  margin: 0;
+  margin-bottom: 10px;
+  }
+
+.search-form input[type="text"]
+{ box-sizing: border-box;
+  width: 310px;
+  border-radius:5px;
+  padding: 0px 0px;
+  background-color: #ffffff;
+  border: 1px solid #d3d3d2;
+  } 
+.user-form{
+  top: 60px;
+  min-height: 215px;
+  left: 770px;
+  width: 280px;
+  padding: 5px 10px;
+  padding-left:5px;
+  border-radius:5px;
+  box-sizing: border-box;
+  z-index: 11;
+}
+.user-form input[type="email"],
+.user-form input[type="password"]
+{ color: #;
+  box-sizing: border-box;
+  width: 230px;
+  border-radius:5px;
+  padding: 7px 10px;
+  margin-left:22px;
+  background-color: #ffffff;
+  border: 1px solid #d3d3d2;
+  }
+
+.search-form input[type="text"]
+{ box-sizing: border-box;
+  width: 311px;
+  border-radius:5px;
+  padding: 10px 10px;
+  background-color: #f9f6f3;
+  border: 1px solid #d3d3d2;
+  }
+
+.search-form p {
+  margin: 0;
+  margin-bottom: 10px;
+  }
+  /*Кнопка в логин-форме*/ 
+/*.login-btn{
+  color: #ffffff;
+  background-color: #ef5f3f;
+  width: 100px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-left: 22px;
+  padding: 10px;
+  border-radius: 50px;
+  border: 0;
+}
+
+.form-link{
     list-style: none;
    }
 
-  a.form-link{
+a.form-link{
   color:#323232; 
   font-size: 13px;
   font-weight: 400px;
   line-height: 24px;
   text-transform: none;
   }
-.subscribe-form input[type="text"]
+.subscribe-form input[type="text"],
+.subscribe-form input[type="email"]
 {
   font-size: 12px;
   font-weight: 400px;
@@ -133,6 +266,17 @@ p.telefone-number {
   border: 1px solid #999999;
   background: #ffffff;
 }
+
+/* Визуально спрятанные элементы*/
+
+.visually-hidden{
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 
 /*Корзина*/
 
@@ -166,7 +310,7 @@ td{
 
 /* Фильтры */
 .filters{
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
@@ -180,17 +324,20 @@ td{
   text-decoration: none;
 }
 
-/*.filters-input*/
 
-
-/.visually-hidden{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  border: 0;
-  padding: 0;
-  margin: -1; 
+p.slide-title-1{
+  display: block;
+  position: relative;
 }
+p.slide-title-2,.slide-title-3 {
+  display: none;
+}
+/*select {
+  background: #a9bab0;
+  border-radius: 20px;
+  padding: 5px;
+  color: #fff;
+}*/
 
 
 /*Хлебные крошки*/
@@ -200,11 +347,11 @@ td{
 .breadcrumbs a {
 font-size: 14px;
 line-height: 16px;
-font-weight: 400px;
+font-weight: 400;
 color: #ffffff;
 text-decoration: none;
 }
-/*Толшина шрифта не сработала*/
+
 .breadcrumbs a:hover,
 .breadcrumbs a:focus
  {
@@ -218,8 +365,8 @@ text-decoration: none;
   color: #ffffff;
   text-decoration: none;
 }
-
-.slide-title{
+/*Слайдер*/
+/*.slide-title{
   font-size: 60px;
   line-height: 60,35px;
   font-weight: bold;
@@ -233,8 +380,91 @@ text-decoration: none;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
- }
+ }*/
 
+.wrapper {
+  height: 881px;
+  margin: -190px auto 0;
+  position: relative;
+  width: 1045px;
+  z-index: 0;
+}
+
+.slider {
+  height: inherit;
+  overflow: hidden;
+  position: relative;
+  width: inherit;
+  z-index: 0;
+  
+}
+
+.slides {
+  height: inherit;
+  opacity: 0;
+  position: absolute;
+  width: inherit;
+  z-index: 0;
+  transform: scale(1.5);
+  transition: transform opacity 0.6s linear, opacity 0.6s linear;
+}
+
+.slide1 { background-image: url(https://wmpics.pics/di-7DC0KM1C.png); }
+.slide2 { background-image: url(https://wmpics.pics/di-LQDY.png); }
+.slide3 { background-image: url(https://wmpics.pics/di-5EUL.png); }
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3
+ {
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+}
+
+.wrapper > input {
+  display: none;
+}
+
+.wrapper .controls {
+  left: -70px;
+  margin-left: 90px;
+  position: absolute;
+  top:600px;
+  z-index: 1;
+}
+
+.wrapper label {
+  cursor: pointer;
+  display: inline-block;
+  height: 8px;
+  margin: 25px 12px 0 16px;
+  position: relative;
+  width: 8px;
+  border-radius: 50%;
+  transition: background ease-in-out .5s;
+  z-index: 1;
+}
+
+.wrapper label:hover, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3)
+ {
+  background: #ddd;
+}
+
+.wrapper label:after {
+  border: 2px solid #ddd;
+  content: " ";
+  display: block;
+  height: 12px;
+  left: -4px;
+  position: absolute;
+  top: -4px;
+  width: 12px;
+  border-radius: 50%;
+}
 
 /*Пагинация*/
 
@@ -291,6 +521,7 @@ p.item-price {
   background-color: transparent;
   text-align: left; 
 }
+
 .btn,
 .btn-banner,
 .btn-slide{
@@ -440,21 +671,7 @@ p.for-orders{
   font-weight: 400px;
   text-decoration: none;
 }
-p.phone-number{
-  color: #323232;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: bold;
-  text-decoration: none;  
-}
 
-p.time-work{
-  color: #323232;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 400px;
-  text-decoration: none;
-}
 a.btn-feedback{
   color: #ffffff;
   font-size: 18px;
@@ -466,3 +683,119 @@ a.btn-feedback{
 .btn{
   list-style: none;
 }
+
+.main-header {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  flex-wrap: wrap; /*перенос строки */
+  justify-content: space-between; /*прижимает содержимое к краям */
+  align-items: center; /*выравнивает элементы по центру на вертикальной */
+  background: transparent;
+  z-index: 99;
+}
+
+.user-block{
+  display: flex;
+  background: #fff;
+  min-width: 240px;
+  justify-content: space-around;
+
+}
+
+nav {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+
+ }
+
+.login-button
+ {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+} 
+.main-header-logo {
+  position: relative;
+  display: flex;
+  
+  padding-left: 50px;
+}
+.contacts{
+background: #87a092; 
+display: flex;
+width: 70%;
+background-color: transparent;
+margin: 0 auto;
+flex-direction: column;
+flex-wrap: wrap; 
+justify-content: flex-end;
+
+}
+p.phone-number{
+  color: #323232;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #87a092; 
+  }
+
+p.time-work{
+  color: #323232;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400px;
+  text-decoration: none;
+  background: #87a092; 
+  
+
+}
+.phone-number,
+.time-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #fff;
+
+  
+}
+
+.phone-number{
+ height: auto; 
+}
+.banner-columns{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: -240px;
+  z-index: 15;
+}
+.banner-raspberry,
+.banner-chocolate
+{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.banner-chocolate{
+  margin-left: 50px;
+}
+.hits{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  z-index: 15;
+ }
+ .ice-cream img {
+  width: 100%;
+
+ }
+
+
