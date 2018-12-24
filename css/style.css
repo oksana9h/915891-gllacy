@@ -267,7 +267,6 @@ input[type="radio"].visually-hidden {
   padding: 14px 0 0;
 }
 
-/*!--левый хедер---------------------------------------------------------------------------*/
 
 .main-navigation {
   padding: 0;
@@ -285,6 +284,10 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
+}
+.sub-item-current  {
+  border-bottom: 1px solid #999999;
+
 }
 
 .catalog {
@@ -438,7 +441,6 @@ input[type="radio"].visually-hidden {
 }
 
 
-/*!--правый хедер---------------------------------------------------------------------------*/
 
 .right-navigation-container {
   display: -webkit-box;
@@ -698,13 +700,23 @@ input[type="radio"].visually-hidden {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
+}
+.right-side{
+ display: flex; 
+ justify-content: flex-end;
+}
+.left-side{
+  display: flex;
+  justify-content: flex-start;
+  margin-right:926px;
 }
 
 .breadcrumbs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: flex-end;
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 0 0 2px;
@@ -726,23 +738,42 @@ input[type="radio"].visually-hidden {
 
   display: inline-block;
   margin: 0 6px 0;
+  position: left;
 
   vertical-align: top;
 }
-
+.bottom-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.left-side {
+  display: inline;
+  position: left;
+  padding-left: 0;
+   
+}
 .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 175px;
   margin: 0; 
+
 }
 
 .info-time {
@@ -953,7 +984,7 @@ input[type="radio"].visually-hidden {
   padding: 9px 15px 12px;
 }
 
-/*слайдер---------------------------------------------------------------------------*/
+/*Слайдер*/
 
 .container {
   padding: 0 27px;
@@ -1030,17 +1061,17 @@ input[type="radio"].visually-hidden {
 
 .slider-radio-1:checked ~ .site-wrapper {
   background-color: #849d8f;
-  background-image: url("../img/icecream-slider-1.png");
+  background-image: url("../img/index.html/slide1.png");
 }
 
 .slider-radio-2:checked ~ .site-wrapper {
   background-color: #8996a6;
-  background-image: url("../img/icecream-slider-2.png");
+  background-image: url("../img/index.html/slide2.png");
 }
 
 .slider-radio-3:checked ~ .site-wrapper {
   background-color: #9d8b84;
-  background-image: url("../img/icecream-slider-3.png");
+  background-image: url("../img/index.html/slide3.png");
 }
 
 .slider-radio-1:checked ~ .site-wrapper .slider-item-1,
@@ -1055,13 +1086,13 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-/*акции---------------------------------------------------------------------------*/
+/*Баннеры*/
 
-.shares {
+.banners {
   margin: 0 0 14px;
 }
 
-.shares-list {
+.banners-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1076,7 +1107,7 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.shares-position {
+.banners-position {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1087,23 +1118,23 @@ input[type="radio"].visually-hidden {
   border-radius: 15px;
 }
 
-.shares-raspberries {
+.banners-raspberries {
   background-color: #78172c;
-  background-image: url("../img/raspberry-background.png");
+  background-image: url("../img/index.html/raspberry.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
-.shares-chocolate {
+.banners-chocolate {
   background-color: #462b1f;
-  background-image: url("../img/chocolate-background.png");
+  background-image: url("../img/index.html/chocolate.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
-.shares-header {
+.banners-header {
   margin: 0 0 15px 0;
   padding: 0;
 
@@ -1111,7 +1142,7 @@ input[type="radio"].visually-hidden {
   line-height: 41px;
 }
 
-.shares-text {
+.banners-text {
   margin: 0;
   padding: 0px 0 45px 0;
 
@@ -1119,7 +1150,7 @@ input[type="radio"].visually-hidden {
   line-height: 22px;
 }
 
-.shares-button {
+.banners-button {
   position: absolute;
   right: 21px;
   bottom: 23px;
@@ -1127,7 +1158,7 @@ input[type="radio"].visually-hidden {
   padding: 10px 22px 12px;
 }
 
-/*продукты и хиты продаж---------------------------------------------------------------------------*/
+/*Хиты*/
 
 .index-products {
   margin: 0 0 38px;
@@ -1261,7 +1292,7 @@ input[type="radio"].visually-hidden {
   width: 61px;
   height: 61px;
 
-  background-image: url("../img/hit.png");
+  background-image: url("../img/catalog.html/hit.svg");
   background-repeat: no-repeat;
   background-position: 0% 0%;
 }
@@ -1288,25 +1319,6 @@ input[type="radio"].visually-hidden {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-/*.kg {
-  font-size: 30px;
-}
-
-.kg::before {
-  content: "";
-
-  display: inline-block;
-  width: 35px;
-  height: 40px;
-
-  vertical-align: top;
-
-  background-image: url("../img/ruble.png");
-  background-repeat: no-repeat;
-  background-size: 30px 35px;
-  background-position: 5px 6px;
-}
-*/
 .send-button {
   padding: 8px 17px 13px;
 }
@@ -1327,7 +1339,7 @@ input[type="radio"].visually-hidden {
 }
 
 
-/*!--о нас---------------------------------------------------------------------------*/
+/*About*/
 
 
 .about {
@@ -1340,7 +1352,7 @@ input[type="radio"].visually-hidden {
   color: #323232;
 
   background-color: #ebdfc5;
-  background-image: url("../img/waffle-background.png");
+  background-image: url("../img/index.html/pattern-SEO.png");
   background-size: cover;
   background-position: center center;
   border-radius: 15px;
@@ -1390,7 +1402,7 @@ input[type="radio"].visually-hidden {
   width: 49px;
   height: 49px;
 
-  background-image: url("../img/icecream.png");
+  background-image: url("../img/catalog.html/ice-cream.svg");
   background-repeat: no-repeat;
   background-size: 49px 49px;
 }
@@ -1405,7 +1417,7 @@ input[type="radio"].visually-hidden {
   width: 49px;
   height: 49px;
 
-  background-image: url("../img/eco.png");
+  background-image: url("../img/catalog.html/eco.svg");
   background-repeat: no-repeat;
   background-size: 49px 49px;
 }
@@ -1420,7 +1432,7 @@ input[type="radio"].visually-hidden {
   width: 49px;
   height: 49px;
 
-  background-image: url("../img/cow.png");
+  background-image: url("../img/catalog.html/cow.svg");
   background-repeat: no-repeat;
   background-size: 49px 49px;
 }
@@ -1435,12 +1447,12 @@ input[type="radio"].visually-hidden {
   width: 49px;
   height: 49px;
 
-  background-image: url("../img/thermometer.png");
+  background-image: url("../img/catalog.html/thermometer.svg");
   background-repeat: no-repeat;
   background-size: 49px 49px;
 }
 
-/*!--блог и подписка---------------------------------------------------------------------------*/
+/*Блог и подписка*/
 
 .main-wrapper {
   display: -webkit-box;
@@ -1452,7 +1464,6 @@ input[type="radio"].visually-hidden {
   margin-bottom: 40px;
 }
 
-/*!--блог ---------------------------------------------------------------------------*/
 
 .blog {
   -webkit-box-sizing: border-box;
@@ -1461,7 +1472,7 @@ input[type="radio"].visually-hidden {
   padding: 23px 20px 81px;
 
   background-color: #ffffff;
-  background-image: url("../img/strawberry-background.png");
+  background-image: url("../img/index.html/background-block.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 15px;
@@ -1526,8 +1537,8 @@ input[type="radio"].visually-hidden {
   color: #5a5a5a;
 
   background-color: #f8f7f4;
-  background-image: url("../img/dispatch-background.png");
-  background-repeat: no-repeat;
+  background-image: url("../img/index.html/dispatch-background.png");
+  background-repeat: repeat;
   border-radius: 15px;
 }
 
@@ -1687,7 +1698,7 @@ input[type="radio"].visually-hidden {
   height: 18px;
 
   background-color: transparent;
-  background-image: url("../img/x.svg");
+  background-image: url("../img/catalog.html/x.svg");
   background-repeat: no-repeat;
   background-position: center center;
   border: none;
@@ -1999,7 +2010,7 @@ cursor: pointer;
 }
 
 
-/*!--хлебные крошки ---------------------------------------------------------------------------*/
+/*Breadcrumbs*/
 
 .breadcrumbs-link {
   font-size: 14px;
@@ -2026,7 +2037,7 @@ cursor: pointer;
   border: none;
 }
 
-/*!--фильтры ---------------------------------------------------------------------------*/
+/*Фильтры */
 
 .filters {
   margin-bottom: 25px;
@@ -2150,7 +2161,6 @@ cursor: pointer;
   border: none;
 }
 
-/*!--фильтры-цена ---------------------------------------------------------------------------*/
 .filter-range {
   padding: 16px 21px;
 }
@@ -2239,7 +2249,7 @@ cursor: pointer;
 }
 
 
-/*!--фильтры-жирность ---------------------------------------------------------------------------*/
+
 .filter-fat {
   padding-left: 14px;
   padding-right: 17px;
@@ -2326,7 +2336,6 @@ cursor: pointer;
   background-size: 22px 22px;
 }
 
-/*!--фильтры-наполнители ---------------------------------------------------------------------------*/
 .filler-label {
   position: relative;
 
@@ -2361,7 +2370,7 @@ cursor: pointer;
   outline: 1px dotted black;
 }
 
-/*!--пагинатор ---------------------------------------------------------------------------*/
+/*Пагинатор*/
 .pagination-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
