@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -45,7 +45,7 @@
                   <span class="visually-hidden">Поиск</span>
                 </a>
                 <div class="modal search-modal">
-                  <form class="form-style search-form" action="#" method="get">
+                  <form class="form-style search-form" action="#" method="get" name="searchform">
                     <label class="visually-hidden" for="search">Поиск</label>
                     <input type="search" name="search" id="search" placeholder="Что ищем?">
                   </form>
@@ -59,7 +59,7 @@
                   </a>
                   <!--Форма аутентификации-->
                   <div class="modal sign-in-modal">
-                    <form class="form-style sign-in-form" action="#" method="post">
+                    <form class="form-style sign-in-form" action="#" method="post" name="signinform">
                       <label class="visually-hidden" for="user-email">Электронная почта</label>
                       <input type="email" name="email" id="user-email" placeholder="Электронная почта">
                       <label class="visually-hidden" for="user-password">Пароль</label>
@@ -84,7 +84,7 @@
                         </button>
                       </td>
                       <td class="cart-image">
-                        <img src="img/small-ice-cream.png" width="33" height="33" alt="icecream-1">
+                        <img src="img/index.html/hit1.png" width="33" height="33" alt="icecream-1">
                       </td>
                       <td class="cart-product">
                         <p class="cart-product-description">Пломбир с апельсиновым джемом</p>
@@ -103,7 +103,7 @@
                         </button>
                       </td>
                       <td class="cart-image">
-                        <img src="img/small-ice-pink.png" width="33" height="33" alt="icecream-2">
+                        <img src="img/index.html/hit3.png" width="33" height="33" alt="icecream-2">
                       </td>
                       <td class="cart-product">
                         <p class="cart-product-description">Клубничный пломбир с присыпкой из белого шоколада</p>
@@ -176,25 +176,25 @@
               <legend>Жирность:</legend>
               <div class="filter-style filter-fat">
                 <label class="fat-label fat-0">
-                  <input class="fat-radio" type="radio" name="fat-content" id="fat-0" value="0%">
+                  <input class="fat-radio visually-hidden" type="radio" name="fat-content" id="fat-0" value="0%">
                   <span class="radio-indicator"></span>
 
                   0%
                 </label>
                 <label class="fat-label fat-10">
-                  <input class="fat-radio" type="radio" name="fat-content" id="fat-10" value="10%" checked>
+                  <input class="fat-radio visually-hidden" type="radio" name="fat-content" id="fat-10" value="10%" checked>
                   <span class="radio-indicator"></span>
 
                   до 10%
                 </label>
                 <label class="fat-label fat-30">
-                  <input class="fat-radio" type="radio" name="fat-content" id="fat-30" value="30%">
+                  <input class="fat-radio visually-hidden" type="radio" name="fat-content" id="fat-30" value="30%">
                   <span class="radio-indicator"></span>
 
                   до 30%
                 </label>
                 <label class="fat-label fat-over-30">
-                  <input class="fat-radio" type="radio" name="fat-content" id="fat-over-30" value="more 30%">
+                  <input class="fat-radio visually-hidden" type="radio" name="fat-content" id="fat-over-30" value="more 30%">
                   <span class="radio-indicator"></span>
 
                   выше 30%
@@ -205,31 +205,31 @@
               <legend>Наполнители:</legend>
               <div class="filter-style filter-fillers">
                 <label class="filler-label choco">
-                  <input class="filler-checkbox" type="checkbox" name="choco" id="choco" checked>
+                  <input class="filler-checkbox visually-hidden" type="checkbox" name="choco" id="choco" checked>
                   <span class="checkbox-indicator"></span>
                   шоколадные
 
                 </label>
                 <label class="filler-label sugar">
-                  <input class="filler-checkbox" type="checkbox" name="sugar" id="sugar" checked>
+                  <input class="filler-checkbox visually-hidden" type="checkbox" name="sugar" id="sugar" checked>
                   <span class="checkbox-indicator"></span>
                   сахарные присыпки
 
                 </label>
                 <label class="filler-label frut">
-                  <input class="filler-checkbox" type="checkbox" name="frut" id="frut">
+                  <input class="filler-checkbox visually-hidden" type="checkbox" name="frut" id="frut">
                   <span class="checkbox-indicator"></span>
                   фрукты
 
                 </label>
                 <label class="filler-label syrup">
-                  <input class="filler-checkbox" type="checkbox" name="syrup" id="syrup">
+                  <input class="filler-checkbox visually-hidden" type="checkbox" name="syrup" id="syrup">
                   <span class="checkbox-indicator"></span>
                   сиропы
 
                 </label>
                 <label class="filler-label jam">
-                  <input class="filler-checkbox" type="checkbox" name="jam" id="jam">
+                  <input class="filler-checkbox visually-hidden" type="checkbox" name="jam" id="jam">
                   <span class="checkbox-indicator"></span>
                   джемы
 
@@ -476,7 +476,7 @@
     </div>
   </div>
 
-<!--<script src="js/script.js"></script>-->
+<script src="js/script.js"></script>
 
   </body>
 </html>

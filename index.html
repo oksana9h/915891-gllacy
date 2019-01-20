@@ -6,7 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -29,11 +29,11 @@
               <nav class="main-navigation">
                 <ul class="site-navigation">
                   <li class="catalog">
-                    <a class="header-link catalog-link" href="inner.html">Каталог</a>
+                    <a class="header-link catalog-link" href="catalog.html">Каталог</a>
                     
                       <ul class="modal catalog-navigation">
                         <li><a class="catalog-navigation-link new-item-link" href="#">Новинки</a></li>
-                        <li><a class="catalog-navigation-link creamy-link" href="inner.html">Сливочное</a></li>
+                        <li><a class="catalog-navigation-link creamy-link" href="catalog.html">Сливочное</a></li>
                         <li><a class="catalog-navigation-link" href="#">Щербеты</a></li>
                         <li><a class="catalog-navigation-link" href="#">Фруктовый лед</a></li>
                         <li><a class="catalog-navigation-link" href="#">Мелорин</a></li>
@@ -44,13 +44,14 @@
                   <li><a class="header-link" href="#">О Компании</a></li>
                 </ul>
               </nav>
+              <!--Поиск-->
               <div class="right-navigation-container">
                 <div class="search">
                   <a class="search-link right-navigation-link" href="#">
                     <span class="visually-hidden">Поиск</span>
                   </a>
                   <div class="modal search-modal">
-                    <form class="form-style search-form" action="#" method="get">
+                    <form class="form-style search-form" action="#" method="get" name="searchform">
                       <label class="visually-hidden" for="search">Что ищем?</label>
                       <input type="search" name="search" id="search" placeholder="Что ищем?">
                     </form>
@@ -64,7 +65,7 @@
                     </a>
                     <!--Форма аутентификации-->
                     <div class="modal sign-in-modal">
-                      <form class="form-style sign-in-form" action="#" method="post">
+                      <form class="form-style sign-in-form" action="#" method="post" name="signinform">
                         <label class="visually-hidden" for="user-email">Электронная почта</label>
                         <input type="email" name="email" id="user-email" placeholder="Электронная почта">
                         <label class="visually-hidden" for="user-password">Пароль</label>
@@ -88,7 +89,8 @@
 
           <div class="bottom-container">  
             <p class="info">
-              <span class="info-time">С 10 до 20, ежедневно</span>
+              <span class="info-time">
+              С 10 до 20, ежедневно</span>
               <span class="info-tel">8 812 450-25-25</span>
             </p>
           </div>
@@ -260,22 +262,22 @@
           <section class="map">
             <h2 class="visually-hidden">Карта</h2>
             <div class="map-input">
+              <img src="img/index.html/map2.png" width="1200" height="430" alt="Карта">
               <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A14a53e1340af0dc354bc78024582a9b978b11ada013a43c2ddec73d4adc3a1ab&amp;source=constructor" width="1200" height="430" frameborder="0"></iframe>
-              <img src="img/map.png" width="1200" height="430" alt="Карта">
             </div>
             <div class="feedback">
               <h3 class="visually-hidden">Обратная связь</h3>
               <div class="feedback-text">
                 <p class="feedback-adress">
-                  Адрес главного офиса<br>
-                  и офлайн-магазина:<br>
+                  Адрес главного офиса
+                  и офлайн-магазина:
                   <span class="feedback-bold">
                   ул. Большая Конюшенная
-                  19/8, Санкт-Петербург<br>
+                  19/8, Санкт-Петербург
                   </span>
                 </p>
                 <p class="feedback-number">
-                  Для заказов по телефону:<br>
+                  Для заказов по телефону:
                   <span class="feedback-bold">
                   8 812 450-25-25
                   </span><br>
@@ -347,24 +349,24 @@
 
     <!--Форма обратной связи-->
     <div class="modal feedback-modal-wrapper">
-              <section class="feedback-modal">
-                <h2 class="visually-hidden">Форма обратной связи</h2>
-                <h3 class="feedback-modal-header">Мы обязательно вам ответим!</h3>
-                <button class="modal-close"></button>
-                <form class="form-style feedback-form" action="#" method="post">
-                  <label class="visually-hidden" for="feedback-name">Имя</label>
-                  <input class="feedback-name" type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
-                  <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-                  <input class="feedback-email" type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?">
-                  <textarea class="feedback-textarea" rows="6" cols="40" placeholder="Напишите что нибудь..."></textarea>
-                  <button class="button feedback-modal-button" type="submit" name="feedback">
+      <section class="feedback-modal">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <h3 class="feedback-modal-header">Мы обязательно вам ответим!</h3>
+        <button class="modal-close"></button>
+        <form class="form-style feedback-form" action="#" method="post" name="feedbackform">
+          <label class="visually-hidden" for="feedback-name">Имя</label>
+          <input class="feedback-name" type="text" name="name" id="feedback-name" placeholder="Как вас зовут?" required>
+          <label class="visually-hidden" for="feedback-email">Электронная почта</label>
+          <input class="feedback-email" type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?" required>
+          <textarea class="feedback-textarea" name="textarea" rows="6" cols="40" placeholder="Напишите что нибудь..." required></textarea>
+          <button class="button feedback-modal-button" type="submit" name="feedback">
                     Отправить
-                  </button>
-                </form>
-              </section>
-            </div>
+          </button>
+        </form>
+      </section>
+    </div>
 
-<!--<script src="js/script.js"></script>-->
+<script src="js/script.js"></script>
 
   </body>
 </html>
